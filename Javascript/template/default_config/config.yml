@@ -1,0 +1,9 @@
+
+global:
+  environment: local
+
+  test_types: [browser] # api, browser, mobile_app
+
+  request_logging: true
+  try_with_logging: true
+  logging_severity: debug

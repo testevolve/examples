@@ -1,0 +1,23 @@
+&defaults_reporting
+
+failure_screenshots: true
+resize_for_screenshots: false
+
+local:
+
+  html_report: true
+  realtime_failure: false
+  junit: true
+  json: true
+  rerun: true
+
+dashboard:
+  enabled: false
+  dashboard_url: https://ORGANISATION_ID.testevolve.io
+  label: example-label
+  auth_token: api-key
+  scheduled_updates: false
+  scheduled_interval: 10
+
+
+<%= IO.read(filename) if File.exists?(filename) %>
