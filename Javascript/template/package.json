@@ -15,6 +15,6 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill",
-    "rerun": "./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill ./remote_test_results/rerun/@rerun.log",
+    "rerun": "./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill ./remote_test_results/rerun/@rerun.log"
   }
 }

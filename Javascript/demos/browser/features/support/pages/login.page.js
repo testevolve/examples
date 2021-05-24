@@ -1,7 +1,7 @@
-import { PageObject } from "@testevolve/te-javascript-framework";
+import { PageObject } from "@testevolve/testevolve-js-spark";
 
 export default new class LoginPage extends PageObject {
-    
+
   initialise() {
     this.usernameInput = this.element(username => ({ name: username }));
     this.passwordInput = this.element(password => ({ name: password }));
@@ -29,5 +29,5 @@ export default new class LoginPage extends PageObject {
     let errormsg = await this.submitError().getText();
     if(errormsg === error) return true;
     else { throw new Error('Submit error was not present when it should be') };
-  }; 
+  };
 };
