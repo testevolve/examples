@@ -1,1 +1,1 @@
-module.exports = { default: "--format ./node_modules/@testevolve/testevolve-js-spark/formatters/testEvolveFormatter --publish-quiet" };
+module.exports = { default: "--format ./node_modules/testevolve-spark/dist/formatters/testEvolveFormatter --publish-quiet" };

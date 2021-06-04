@@ -1,4 +1,4 @@
-import { PageObject } from "@testevolve/testevolve-js-spark";
+import { PageObject } from "testevolve-spark";
 
 export default new class LoginPage extends PageObject {
 
