@@ -1,4 +1,4 @@
-import { registerHooks } from "testevolve-spark";
+import { registerHooks } from "@testevolve/testevolve-spark";
 import { Before, AfterStep, After, AfterAll, setDefaultTimeout } from "@cucumber/cucumber";
 import loginPage from "../support/pages/login.page.js";
 
