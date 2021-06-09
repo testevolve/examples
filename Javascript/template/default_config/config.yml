@@ -2,8 +2,7 @@
 global:
   environment: local
 
-  test_types: [browser] # api, browser, mobile_app
+  test_types: [browser] # browser
 
   request_logging: true
-  try_with_logging: true
   logging_severity: debug
