@@ -1,6 +1,7 @@
 @offline
 Feature: Browser - Local Site Example
 
+  @regression
   Scenario: Verifying elements on a web page
     Given I navigate to the homepage
     Then I can see the Test Evolve logo
@@ -39,4 +40,3 @@ Feature: Browser - Local Site Example
     When I enter test data in all of the required details into the advanced form
     And I submit the form data
     Then the form submission confirmation page is displayed
-    

@@ -1,5 +1,6 @@
 Feature: Demonstration of framework
 
+  @regression
   Scenario: Demo test for TestEvolve JS
     Given we navigate to the TestEvolve homepage
     When we enter our credentials
