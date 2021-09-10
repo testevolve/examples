@@ -49,6 +49,20 @@ browserstack:
     platform: MAC
     device: iPhone 11
     os_version: 13.3
+    orientation: portrait
+
+kobiton:
+  session_name: Regression Tests
+  session_description: Regression Test description
+  capture_screenshots: true
+
+  mobile:
+    device: iPhone 11
+    orientation: portrait
+    browser: safari
+    platform_name: iOS
+    platform_version: 14.4  
+
 
 chrome:
   jmeter: false

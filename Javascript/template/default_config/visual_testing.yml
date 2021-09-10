@@ -28,3 +28,4 @@ applitools:
 percy:
   branch: test
   widths: [800, 1200]
+  debug: false

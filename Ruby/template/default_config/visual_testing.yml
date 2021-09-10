@@ -31,4 +31,9 @@ applitools:
     width: 800
     height: 600
 
+percy:
+  branch: master
+  widths: [800, 1200]
+  debug: false
+
 <%= IO.read(filename) if File.exists?(filename) %>  
