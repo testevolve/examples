@@ -1,2 +1,6 @@
+&defaults_accessibility_testing
+
 enabled: false
 source: axe
+
+<%= IO.read(filename) if File.exists?(filename) %>  
