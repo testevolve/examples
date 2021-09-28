@@ -27,7 +27,6 @@ browserstack:
   platform: mobile # desktop, mobile
 
   local_testing: false
-  download_video_upon_failure: false
   browserstack_debug: true
   test_name: Regression Tests
 

@@ -6,7 +6,6 @@ default_timeout: 20
 
 browserstack:
   local_testing: false
-  download_video_upon_failure: false
   browserstack_debug: true
   test_name: Regression Tests
 
