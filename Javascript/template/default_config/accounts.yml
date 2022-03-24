@@ -11,3 +11,9 @@ kobiton:
 
 percy:
   api_key: api_key
+
+
+sauce_labs:  
+  domain: Your Domain  
+  username: Your Username  
+  access_key: Your Access Key  
