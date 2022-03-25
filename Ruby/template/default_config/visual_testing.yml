@@ -20,10 +20,10 @@ applitools:
   save_failed_tests: false
   hide_scrollbars: true
 
-  scale_ratio:                  # can be left blank - must be a float
-  match_timeout:                # defaults to 2 can be blank - must be an integer
+  scale_ratio: 1               # can be left blank or set to a number
+  match_timeout: 500           # must be an integer and set >= 500ms
 
-  wait_before_screenshots:      # can be blank
+  wait_before_screenshots: 50  # required - must be an integer > 0
 
   app_name: Your Application or website
 
