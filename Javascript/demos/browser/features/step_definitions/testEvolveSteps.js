@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import loginPage from "../support/pages/login.page.js";
+import { loginPage } from "../support/pages";
 import { testEvolve } from "@testevolve/testevolve-spark";
 
 Given(/^we navigate to the TestEvolve homepage$/, async () => {
