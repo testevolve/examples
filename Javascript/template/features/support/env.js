@@ -1,6 +1,6 @@
 import { registerHooks } from "@testevolve/testevolve-spark";
 import { Before, AfterStep, After, AfterAll, setDefaultTimeout } from "@cucumber/cucumber";
-import loginPage from "../support/pages/login.page.js";
+import * as pages from "../support/pages";
 
 registerHooks({ Before, AfterStep, After, AfterAll });
 
@@ -8,9 +8,8 @@ registerHooks({ Before, AfterStep, After, AfterAll });
 // due to the tests taking slightly longer to run (5 seconds is the default timeout used by cucumber)
 setDefaultTimeout(20 * 1000);
 
-const PAGES = [loginPage];
 Before(async () => {
-  PAGES.forEach((page) => {
+  Object.values(pages).forEach(page => {
     page.initialise();
   });
 });
