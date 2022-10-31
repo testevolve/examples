@@ -10,7 +10,7 @@ local:
 
 dashboard:
   enabled: false
-  dashboard_url: https://ORG_ID.testevolve.io
+  project_id: 1
   label: test-evolve-label
   auth_token: api_key
   scheduled_updates: false
