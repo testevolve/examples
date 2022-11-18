@@ -10,3 +10,13 @@ browserstack:
   mobile:
     device: Test Device
     platform: android
+
+local_device:
+  command_timeout: 60
+  appium_options: []
+  mobile:
+    driver: UIAutomator2
+    device_name: Samsung Galaxy S20
+    platform_name: Android
+    platform_version: "10"
+    udid: emulator-5554
