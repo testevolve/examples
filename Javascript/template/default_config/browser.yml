@@ -12,8 +12,8 @@ local:
 
   desktop:
     browser: chrome # chrome, firefox, safari, edge
-    maximise: false # true, false
-    resize: true # true, false
+    maximise: true # true, false
+    resize: false # true, false
     breakpoint:
       width: 800
       height: 600
