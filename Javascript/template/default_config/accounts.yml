@@ -15,4 +15,8 @@ percy:
 sauce_labs:  
   domain: Your Domain  
   username: Your Username  
-  access_key: Your Access Key  
+  access_key: Your Access Key
+
+testrail:
+  username: Your Username
+  password: Your Password
