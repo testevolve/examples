@@ -85,7 +85,7 @@ sauce_labs:
     browser: Safari
 
 chrome:
-  version: stable
+  version: default
   jmeter: false
   owasp_zap: false
   custom_options: []
