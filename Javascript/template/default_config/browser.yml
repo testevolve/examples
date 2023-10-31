@@ -85,13 +85,8 @@ sauce_labs:
     browser: Safari
 
 chrome:
+  version: default
   jmeter: false
   owasp_zap: false
   custom_options: []
-  chromedriver_version: default
 
-firefox:
-  geckodriver_version: default
-
-edge:
-  edgedriver_version: default
