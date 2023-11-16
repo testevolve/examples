@@ -90,3 +90,5 @@ chrome:
   owasp_zap: false
   custom_options: []
 
+firefox:
+  version: default
