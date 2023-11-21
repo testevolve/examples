@@ -1,0 +1,12 @@
+source: browserstack
+app_path: /path/to/app
+default_timeout: 20
+
+browserstack:
+  local_testing: false
+  browserstack_debug: true
+  test_name: Regression Tests
+
+  mobile:
+    device: Test Device
+    platform: android
