@@ -92,3 +92,6 @@ chrome:
 
 firefox:
   version: default
+
+edge:
+  version: default
