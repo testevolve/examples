@@ -1,0 +1,17 @@
+failure_screenshots: true
+
+local:
+
+  html_report: true
+  realtime_failure: true
+  junit: false
+  json: false
+  rerun: true
+
+dashboard:
+  enabled: false
+  dashboard_url: https://ORG_ID.testevolve.io
+  label: test-evolve-label
+  auth_token: api_key
+  scheduled_updates: false
+  scheduled_interval: 10

@@ -5,8 +5,8 @@ export default new class LoginPage extends PageObject {
   initialise() {
     this.usernameInput = this.element(username => ({ name: username }));
     this.passwordInput = this.element(password => ({ name: password }));
-    this.submitButton = this.element(() => ({ css: "[data-test=\'signIn-button\']" }));
-    this.submitError = this.element(() => ({ css: "[class=\'sc-gLDzan hryflJ\']" }));
+    this.submitButton = this.element(() => ({ css: "[data-test=\'btn-addUser\']" }));
+    this.submitError = this.element(() => ({ css: "[data-test=\'formError\']" }));
   };
 
   async open() {
