@@ -1,0 +1,23 @@
+failure_screenshots: true
+
+local:
+
+  html_report: true
+  realtime_failure: true
+  junit: false
+  json: false
+  rerun: true
+
+dashboard:
+  enabled: false
+  project_id: 1
+  label: test-evolve-label
+  auth_token: api_key
+  scheduled_updates: false
+  scheduled_interval: 10
+
+testrail:
+  enabled: false
+  domain: example-domain
+  project_id: 1
+  test_run_id: 0
