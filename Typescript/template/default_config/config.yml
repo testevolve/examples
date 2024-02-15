@@ -4,4 +4,5 @@ global:
 
   test_types: [browser] # browser
 
-  logging_severity: info
+  request_logging: true
+  logging_severity: debug
