@@ -47,7 +47,7 @@ export default new class Homepage extends PageObject {
     await this.range.set('3')
     await this.range.set('5')
     await this.range.set('4')
-    await this.file.set(`${process.env.INIT_CWD}/features/support/resources/robot_picture.png`);
+    await this.file.set(`${process.env.PWD}/features/support/resources/robot_picture.png`);
     await this.url.set('www.bbc.co.uk');
     await this.mySearch.set('looking for...');
 
@@ -86,7 +86,7 @@ export default new class Homepage extends PageObject {
     await testEvolve.browser.findElement(By.name("example-range")).sendKeys('3');
     await testEvolve.browser.findElement(By.name("example-range")).sendKeys('5');
     await testEvolve.browser.findElement(By.name("example-range")).sendKeys('4');
-    await testEvolve.browser.findElement(By.name("example-file")).sendKeys(`${process.env.INIT_CWD}/features/support/resources/robot_picture.png`);
+    await testEvolve.browser.findElement(By.name("example-file")).sendKeys(`${process.env.PWD}/features/support/resources/robot_picture.png`);
     await testEvolve.browser.findElement(By.name("url")).sendKeys('www.bbc.co.uk');
     await testEvolve.browser.findElement(By.name("example-search")).sendKeys('looking for...');
     await testEvolve.browser.findElement(By.name("example-colour1")).sendKeys('#00ff41');
