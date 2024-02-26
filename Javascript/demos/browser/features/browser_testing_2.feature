@@ -1,6 +1,6 @@
 @browserstack_browser @retry @parallel @local_browser @visual @axe @lighthouse @multi_type
 
-Feature: Browser based tests
+Feature: Browser based tests - 2
 
   This second feature is the same as the first but Features and Scenarios are labelled differently.
   We have included these so you can experiment with multi-threaded test execution across Features and Scenarios.
