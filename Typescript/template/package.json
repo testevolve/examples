@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "An example Test Evolve project",
   "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/register": "^7.0.0",
     "@testevolve/testevolve-spark": "npm:@testevolve/testevolve-js-spark"
   },
   "scripts": {
