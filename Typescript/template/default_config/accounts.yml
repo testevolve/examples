@@ -7,12 +7,16 @@ browserstack:
 
 kobiton:
   username: Your Username
-  api_key: api_key  
+  api_key: api_key
 
 percy:
   api_key: api_key
 
-sauce_labs:  
-  domain: Your Domain  
-  username: Your Username  
-  access_key: Your Access Key  
+sauce_labs:
+  domain: Your Domain
+  username: Your Username
+  access_key: Your Access Key
+
+testrail:
+  username: My Username
+  password: My Password
