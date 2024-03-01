@@ -1,5 +1,5 @@
-source: browserstack
-app_path: /path/to/app
+source: local_device
+app_path: path/to/app
 default_timeout: 20
 
 browserstack:
@@ -10,3 +10,14 @@ browserstack:
   mobile:
     device: Test Device
     platform: android
+
+local_device:
+  command_timeout: 60
+  appium_options: []
+
+  mobile:
+    driver: UiAutomator2
+    device_name: Pixel 5
+    platform_name: Android
+    platform_version: '10'
+    udid: emulator-5554
