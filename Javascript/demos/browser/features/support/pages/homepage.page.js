@@ -93,7 +93,6 @@ export default new class Homepage extends PageObject {
     await testEvolve.browser.findElement(By.name("example-password")).sendKeys('my secret');
     await testEvolve.browser.findElement(By.name("example-number")).sendKeys('12345');
     await testEvolve.browser.findElement(By.name("example-radio-1")).click()
-    await testEvolve.browser.findElement(By.name("example-radio-2")).click()
     await testEvolve.browser.executeScript("arguments[0].scrollIntoView()", await testEvolve.browser.findElement(By.name("example-radio-1")));
     await testEvolve.browser.sleep(1000)
     await testEvolve.browser.findElement(By.name("example-checkbox")).click()
