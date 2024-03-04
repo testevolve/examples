@@ -1,7 +1,6 @@
-
 global:
   environment: local
 
-  test_types: [browser] # browser
+  test_types: [browser]
 
   logging_severity: info

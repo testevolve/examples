@@ -61,34 +61,34 @@ kobiton:
     orientation: portrait
     browser: safari
     platform_name: iOS
-    platform_version: 14.4  
+    platform_version: 14.4
 
-sauce_labs:  
+sauce_labs:
   platform: desktop # desktop, mobile
   test_name: Regression Tests
-  desktop:    
-    platform: Windows 7    
-    browser: Chrome    
-    browser_version: 45    
+  desktop:
+    platform: Windows 7
+    browser: Chrome
+    browser_version: 45
     resolution: 1024x768
-    maximise: true # true, false    
-    resize: false # true, false    
-    breakpoint:      
-      width: 800      
+    maximise: true # true, false
+    resize: false # true, false
+    breakpoint:
+      width: 800
       height: 600
-  mobile:    
-    appium: 1.6.0    
-    device: iPhone 7   
-    orientation: portrait    
-    platform_version: 10.0    
-    platform_name: iOS    
+  mobile:
+    appium: 1.6.0
+    device: iPhone 7
+    orientation: portrait
+    platform_version: 10.0
+    platform_name: iOS
     browser: Safari
 
 chrome:
-  version: default
   jmeter: false
   owasp_zap: false
   custom_options: []
+  version: default
 
 firefox:
   version: default

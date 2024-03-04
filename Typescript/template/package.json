@@ -1,0 +1,14 @@
+{
+  "name": "test-evolve-project",
+  "version": "1.0.0",
+  "description": "An example Test Evolve project",
+  "dependencies": {
+    "@testevolve/testevolve-spark": "npm:@testevolve/testevolve-js-spark"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js",
+    "test:windows": ".\\node_modules\\.bin\\cucumber-js",
+    "rerun": "./node_modules/.bin/cucumber-js ./remote_test_results/rerun/@rerun.log",
+    "rerun:windows": ".\\node_modules\\.bin\\cucumber-js ./remote_test_results/rerun/@rerun.log"
+  }
+}

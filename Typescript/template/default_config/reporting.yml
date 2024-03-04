@@ -1,0 +1,24 @@
+failure_screenshots: true
+
+local:
+
+  html_report: true
+  realtime_failure: true
+  junit: false
+  json: false
+  rerun: true
+
+dashboard:
+  project_id: 1
+  enabled: false
+  dashboard_url: https://ORG_ID.testevolve.io
+  label: test-evolve-label
+  auth_token: api_key
+  scheduled_updates: false
+  scheduled_interval: 10
+
+testrail:
+  enabled: false
+  project_id: 1
+  domain: your_domain
+  test_run_id: 1

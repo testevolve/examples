@@ -1,0 +1,64 @@
+source: local # local, browserstack
+
+default_timeout: 10
+implicit_wait: 5
+page_load_timeout: 10
+
+same_browser: false
+close_browser: true
+clear_cookies: true
+
+local:
+  platform: desktop
+
+  desktop:
+    browser: chrome # chrome, firefox, safari, edge
+    maximise: true # true, false
+    resize: false # true, false
+    breakpoint:
+      width: 800
+      height: 600
+
+  mobile:
+    browser: firefox # chrome, firefox
+    device: iphone   # firefox devices - iphone, ipad, android_phone, android_tablet
+                     # chrome devices - use a valid chrome device eg. iPhone X
+
+browserstack:
+  platform: mobile
+
+  local_testing: false
+  browserstack_debug: true
+  test_name: Regression Tests
+
+  desktop:
+    browser: Chrome
+    browser_version: 45
+    platform: Windows
+    platform_version: 7
+    resolution: 1024x768
+
+    maximise: true
+    resize: false
+    breakpoint:
+      width: 800
+      height: 600
+
+  mobile:
+    browser_name: Safari
+    platform: MAC
+    device: iPhone 6S
+    os_version: 10.3
+
+chrome:
+  version: default
+  jmeter: false
+  owasp_zap: false
+  download_location: /blah
+  custom_options: []
+
+firefox:
+  version: default
+
+edge:
+  version: default
