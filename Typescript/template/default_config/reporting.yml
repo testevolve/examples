@@ -3,7 +3,7 @@ failure_screenshots: true
 local:
 
   html_report: true
-  realtime_failure: true
+  realtime_failure: false
   junit: false
   json: false
   rerun: true
