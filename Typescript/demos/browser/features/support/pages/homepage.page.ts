@@ -82,7 +82,7 @@ export default new class Homepage extends PageObject {
     await this.range.set('5')
     await this.range.set('4')
 
-    await this.file.set(`${process.env.PWD}/features/support/resources/robot_picture.png`);
+    await this.file.set(`${process.cwd()}/features/support/resources/robot_picture.png`);
 
     await this.url.set('www.bbc.co.uk');
 
