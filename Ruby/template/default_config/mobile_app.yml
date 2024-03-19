@@ -1,7 +1,7 @@
 &defaults_mobile_app
 
-source: browserstack # browserstack, local_device
-app_path: /path/to/app
+source: local_device # browserstack, local_device
+app_path: path/to/app
 default_timeout: 20
 
 browserstack:
@@ -15,11 +15,13 @@ browserstack:
 
 local_device:
   command_timeout: 60
+  appium_options: []
 
   mobile:
-    device_name: Samsung Galaxy Tab A
+    driver: UiAutomator2
+    device_name: Test Device
     platform_name: Android
-    platform_version: 5.0.2
-    udid: 1a4f2d81
+    platform_version: API 32
+    udid: emulator-5554
 
-<%= IO.read(filename) if File.exists?(filename) %>  
+  <%= IO.read(filename) if File.exists?(filename) %>
