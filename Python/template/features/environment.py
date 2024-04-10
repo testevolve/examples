@@ -1,8 +1,5 @@
 import testevolve.core.hooks as hooks
 
-import os
-os.environ.pop("CONFIG_DIR", None)
-
 def before_all(context):
     hooks.before_all(context)
 

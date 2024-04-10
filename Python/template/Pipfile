@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [[source]]
-url = "https://username:password@oxy.jfrog.io/artifactory/api/pypi/spark-py/simple"
+url = "https://oxy.jfrog.io/artifactory/api/pypi/spark-py/simple"
 verify_ssl = true
 name = "artifactory"
 
 [packages]
-testevolve = {version = "", index = "artifactory"}
+testevolve = {version = "*", index = "artifactory"}
 
 [requires]
 python_version = "3.11"
