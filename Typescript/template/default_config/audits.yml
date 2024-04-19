@@ -1,0 +1,11 @@
+enabled: false
+source: lighthouse  #axe, lighthouse
+
+lighthouse:
+  performance_threshold: 5
+  accessibility_threshold: 5
+  best_practices_threshold: 5
+  seo_threshold: 5
+
+axe:
+  standards: []

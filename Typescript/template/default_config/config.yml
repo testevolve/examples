@@ -1,0 +1,8 @@
+
+global:
+  environment: local
+
+  test_types: [browser] # browser
+
+  request_logging: true
+  logging_severity: info

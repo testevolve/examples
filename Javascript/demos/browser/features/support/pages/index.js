@@ -1,1 +1,1 @@
-export { default as loginPage } from './login.page';
+export { default as homepage } from './homepage.page.js';

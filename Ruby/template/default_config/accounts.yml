@@ -25,5 +25,9 @@ sauce_labs:
 kobiton:
   username: Your Username
   api_key: api_key
+
+testrail:
+  username: Your Username
+  password: Your Password
   
 <%= IO.read(filename) if File.exists?(filename) %>  
