@@ -35,7 +35,8 @@ class Homepage(Page):
         TestEvolve.browser.get(page)
 
     def accept_cookies(self):
-        TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper").click()
+        if TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper").is_displayed():
+            TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper").click()
 
     def interact_with_page_objects(self):
         TestEvolve.browser.find_element(By.NAME, "example-link").click()

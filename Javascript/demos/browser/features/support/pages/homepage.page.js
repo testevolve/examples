@@ -28,7 +28,14 @@ export default new class Homepage extends PageObject {
   }
 
   interactWithPageObjectsAPI = async () => {
-    await this.myBanner.click();
+    try {
+      if (await this.myBanner.isDisplayed()) {
+        await this.myBanner.click();
+      }
+    } catch (error) {
+      testEvolve.log.info('Element was no longer on the page. Continued to next step.')
+    }
+
     await this.mylink.click();
     await this.myButton.click();
     await this.text.set('some text');
@@ -73,34 +80,6 @@ export default new class Homepage extends PageObject {
     await this.email.set('test@test.com');
   }
 
-  interactWithPageObjectsLegacy = async () => {
-    await testEvolve.browser.findElement(By.className("sqs-cookie-banner-v2-acceptWrapper")).click();
-    await testEvolve.browser.findElement(By.name("example-link")).click();
-    await testEvolve.browser.findElement(By.name("example-button")).click();
-    await testEvolve.browser.findElement(By.name("example-text")).sendKeys('some text');
-    await testEvolve.browser.findElement(By.name("example-phone")).sendKeys('01268 467890');
-    await testEvolve.browser.findElement(By.name("example-datetime")).sendKeys('2025-02-02', '13:57');
-    await testEvolve.browser.findElement(By.name("example-date")).sendKeys('2025-02-02');
-    await testEvolve.browser.findElement(By.name("example-week")).sendKeys('26','2025');
-    await testEvolve.browser.findElement(By.name("example-month")).sendKeys('12', '2025');
-    await testEvolve.browser.findElement(By.name("example-range")).sendKeys('3');
-    await testEvolve.browser.findElement(By.name("example-range")).sendKeys('5');
-    await testEvolve.browser.findElement(By.name("example-range")).sendKeys('4');
-    await testEvolve.browser.findElement(By.name("example-file")).sendKeys(`${process.cwd()}/features/support/resources/robot_picture.png`);
-    await testEvolve.browser.findElement(By.name("url")).sendKeys('www.bbc.co.uk');
-    await testEvolve.browser.findElement(By.name("example-search")).sendKeys('looking for...');
-    await testEvolve.browser.findElement(By.name("example-colour1")).sendKeys('#00ff41');
-    await testEvolve.browser.findElement(By.name("example-password")).sendKeys('my secret');
-    await testEvolve.browser.findElement(By.name("example-number")).sendKeys('12345');
-    await testEvolve.browser.findElement(By.name("example-radio-1")).click()
-    await testEvolve.browser.executeScript("arguments[0].scrollIntoView()", await testEvolve.browser.findElement(By.name("example-radio-1")));
-    await testEvolve.browser.sleep(1000)
-    await testEvolve.browser.findElement(By.name("example-checkbox")).click()
-    await testEvolve.browser.executeScript("arguments[0].value = 'Option 3';", await testEvolve.browser.findElement(By.name("example-select")));
-    await testEvolve.browser.executeScript("arguments[0].dispatchEvent(new MouseEvent('dblclick'));", await testEvolve.browser.findElement(By.name("example-double")));
-    await testEvolve.browser.findElement(By.name("example-email")).sendKeys('test@test.com')
-  }
-
   assertObjectChanges = async () => {
     try {
       if (await this.myBanner.isDisplayed()) {
@@ -108,7 +87,7 @@ export default new class Homepage extends PageObject {
       }
     } catch (error) {
       if (error.name === "StaleElementReferenceError") {
-        console.log("Success - Element not displayed");
+        testEvolve.log.info("Success - Element not displayed");
       };
     };
   };
