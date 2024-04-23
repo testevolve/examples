@@ -12,8 +12,6 @@
   "scripts": {
     "test:examples": "CONFIG_DIR=ci_config/examples ./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill --parallel 2 --tags '@examples'",
     "test:examples:windows": "SET CONFIG_DIR=ci_config/examples && .\\node_modules\\.bin\\cucumber-js --require-module @babel/register --require-module @babel/polyfill --parallel 2 --tags \"@examples\"",
-    "test:legacyexamples": "CONFIG_DIR=ci_config/examples ./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill --parallel 2 --tags '@legacy_examples'",
-    "test:legacyexamples:windows": "SET CONFIG_DIR=ci_config/examples && .\\node_modules\\.bin\\cucumber-js --require-module @babel/register --require-module @babel/polyfill --parallel 2 --tags \"@legacy_examples\"",
     "test": "./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill",
     "test:windows": ".\\node_modules\\.bin\\cucumber-js --require-module @babel/register --require-module @babel/polyfill",
     "rerun": "./node_modules/.bin/cucumber-js --require-module @babel/register --require-module @babel/polyfill ./remote_test_results/rerun/@rerun.log",
