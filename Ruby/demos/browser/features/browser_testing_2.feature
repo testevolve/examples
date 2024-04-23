@@ -1,4 +1,4 @@
-@browserstack_browser @retry @parallel @local_browser @visual @axe @lighthouse @multi_type
+@examples
 Feature: Browser based tests - 2
 
   This second feature is the same as the first but Features and Scenarios are labelled differently.

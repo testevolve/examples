@@ -59,7 +59,14 @@ export default new class Homepage extends PageObject {
 
   interactWithPageObjectsAPI = async () => {
     let text
-    await this.myBanner.click();
+    try {
+      if (await this.myBanner.isDisplayed()) {
+        await this.myBanner.click();
+      }
+    } catch (error) {
+      testEvolve.log.info('Element was no longer on the page. Continued to next step.')
+    }
+
     await this.myLink.click();
     await this.myButton.click();
 
@@ -133,7 +140,7 @@ export default new class Homepage extends PageObject {
         }
      } catch (error) {
         if (error.name === "StaleElementReferenceError") {
-          console.log("Success - Element not displayed");
+          testEvolve.log.info("Success - Element not displayed");
         };
      };
   };

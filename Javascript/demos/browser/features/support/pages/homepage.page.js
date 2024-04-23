@@ -28,7 +28,14 @@ export default new class Homepage extends PageObject {
   }
 
   interactWithPageObjectsAPI = async () => {
-    await this.myBanner.click();
+    try {
+      if (await this.myBanner.isDisplayed()) {
+        await this.myBanner.click();
+      }
+    } catch (error) {
+      testEvolve.log.info('Element was no longer on the page. Continued to next step.')
+    }
+
     await this.mylink.click();
     await this.myButton.click();
     await this.text.set('some text');
@@ -74,7 +81,14 @@ export default new class Homepage extends PageObject {
   }
 
   interactWithPageObjectsLegacy = async () => {
-    await testEvolve.browser.findElement(By.className("sqs-cookie-banner-v2-acceptWrapper")).click();
+    try {
+      if (await testEvolve.browser.findElement(By.className("sqs-cookie-banner-v2-acceptWrapper")).isDisplayed()) {
+        await testEvolve.browser.findElement(By.className("sqs-cookie-banner-v2-acceptWrapper")).click();
+      }
+    } catch (error) {
+      testEvolve.log.info('Element was no longer on the page. Continued to next step.')
+    }
+
     await testEvolve.browser.findElement(By.name("example-link")).click();
     await testEvolve.browser.findElement(By.name("example-button")).click();
     await testEvolve.browser.findElement(By.name("example-text")).sendKeys('some text');
@@ -108,7 +122,7 @@ export default new class Homepage extends PageObject {
       }
     } catch (error) {
       if (error.name === "StaleElementReferenceError") {
-        console.log("Success - Element not displayed");
+        testEvolve.log.info("Success - Element not displayed");
       };
     };
   };
