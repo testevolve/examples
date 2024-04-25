@@ -1,4 +1,4 @@
-@browserstack_browser @retry @parallel @local_browser @visual @axe @lighthouse @multi_type
+@examples
 Feature: Browser based tests
 
   These scenarios show you a a variety of different ways to pass data to your test at runtime.

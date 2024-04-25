@@ -28,7 +28,7 @@ module Pages
     element(:email) { text_field(data_test: 'example-email') }
 
     def interact_with_page_objects()
-      my_banner.click
+      my_banner.click if my_banner.present?
       my_link.click
       my_button.click
       text.set('some text')

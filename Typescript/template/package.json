@@ -6,6 +6,8 @@
     "@testevolve/testevolve-spark": "npm:@testevolve/testevolve-js-spark"
   },
   "scripts": {
+    "test:examples": "CONFIG_DIR=ci_config/examples ./node_modules/.bin/cucumber-js --parallel 2 --tags '@examples'",
+    "test:examples:windows": "SET CONFIG_DIR=ci_config/examples && .\\node_modules\\.bin\\cucumber-js --parallel 2 --tags \"@examples\"",
     "test": "./node_modules/.bin/cucumber-js",
     "test:windows": ".\\node_modules\\.bin\\cucumber-js",
     "rerun": "./node_modules/.bin/cucumber-js ./remote_test_results/rerun/@rerun.log",
