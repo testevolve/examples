@@ -4,4 +4,6 @@ global:
 
   test_types: [ browser ]
 
-  logging_severity: debug
+  request_logging: false
+  try_with_logging: false
+  logging_severity: info
