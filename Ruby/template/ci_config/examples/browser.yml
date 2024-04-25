@@ -85,13 +85,26 @@ sauce_labs:
     browser: Safari
 
 chrome:
+
+  # 117.0.5938.149, 117, default, beta, dev, canary
+
+  version: default
   jmeter: false
   owasp_zap: false
-  custom_options: []
-  version: default
-
-firefox:
-  version: default
+  custom_options: [ ]
+  accept_insecure_certs: true
+  download_location: default
 
 edge:
+
   version: default
+  jmeter: false
+  owasp_zap: false
+  custom_options: [ ]
+  accept_insecure_certs: true
+  download_location: default
+
+firefox:
+
+  version: default
+  accept_insecure_certs: true
