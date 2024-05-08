@@ -1,3 +1,4 @@
+<<: *defaults_config
 
 global:
   environment: local

@@ -1,3 +1,5 @@
+<<: *defaults_mobile_app
+
 source: local
 app_path: /path/to/app
 default_timeout: 20

@@ -1,0 +1,50 @@
+<<: *defaults_browser
+
+source: local
+
+default_timeout: 10
+implicit_wait: 0
+page_load_timeout: 10
+
+same_browser: true
+close_browser: true
+clear_cookies: true
+
+local:
+  platform: desktop # desktop, mobile, tablet
+
+  desktop:
+    browser: chrome # chrome, firefox, ie, safari, edge
+    maximise: true # true, false
+    resize: false # true, false
+    breakpoint:
+      width: 800
+      height: 600
+
+  mobile:
+    browser: chrome   # chrome, firefox, safari
+    device: iPhone 8  # firefox devices - iphone, ipad, android_phone, android_tablet
+    # chrome devices - use a valid chrome device eg. iPhone X
+
+chrome:
+
+  version: default
+  jmeter: false
+  owasp_zap: false
+  custom_options: []
+  accept_insecure_certs: true
+  download_location: default
+
+edge:
+
+  version: default
+  jmeter: false
+  owasp_zap: false
+  custom_options: []
+  accept_insecure_certs: true
+  download_location: default
+
+firefox:
+
+  version: default
+  accept_insecure_certs: true

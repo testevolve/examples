@@ -1,3 +1,5 @@
+<<: *defaults_visual_testing
+
 enabled: false
 source: applitools
 

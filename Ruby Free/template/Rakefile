@@ -1,0 +1,20 @@
+require 'rubocop/rake_task'
+require 'parallel_tests/tasks'
+
+namespace :test do
+  desc 'Runs the rubocop linter'
+  RuboCop::RakeTask.new(:rubocop)
+end
+
+task default: 'test:rubocop'
+
+namespace :ci do
+  desc 'Run tests using specific configs'
+
+  task :example_tests do
+    ENV['CONFIG_DIR'] = 'ci_config/examples'
+    system "parallel_cucumber -n 2 features -o \"-t '@examples'\""
+  rescue StandardError => e
+    puts "At least one test failed, please check your reports. #{e}"
+  end
+end
