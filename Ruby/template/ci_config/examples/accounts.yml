@@ -1,3 +1,5 @@
+<<: *defaults_accounts
+
 applitools:
   api_key: api_key
 

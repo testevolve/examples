@@ -1,3 +1,5 @@
+<<: *defaults_audits
+
 enabled: false
 source: axe  #axe, lighthouse
 

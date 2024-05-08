@@ -1,3 +1,5 @@
+<<: *defaults_browser
+
 source: local # local, browserstack
 
 default_timeout: 10
