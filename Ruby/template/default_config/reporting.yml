@@ -14,8 +14,8 @@ local:
 dashboard:
   enabled: false
   project_id: 1
-  label: test-evolve-label
-  auth_token: api_key
+  label: example-label
+  auth_token: api-key
   scheduled_updates: false
   scheduled_interval: 10
 
