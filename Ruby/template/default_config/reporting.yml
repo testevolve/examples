@@ -13,7 +13,7 @@ local:
 
 dashboard:
   enabled: false
-  dashboard_url: https://ORGANISATION_ID.testevolve.io
+  project_id: 1
   label: example-label
   auth_token: api-key
   scheduled_updates: false

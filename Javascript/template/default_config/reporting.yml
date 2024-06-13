@@ -6,13 +6,13 @@ local:
   realtime_failure: false
   junit: false
   json: false
-  rerun: true
+  rerun: false
 
 dashboard:
   enabled: false
   project_id: 1
-  label: test-evolve-label
-  auth_token: api_key
+  label: example-label
+  auth_token: api-key
   scheduled_updates: false
   scheduled_interval: 10
 

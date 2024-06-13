@@ -15,7 +15,7 @@ dashboard:
   enabled: false
   project_id: 1
   label: example-label
-  auth_token: example-auth-token
+  auth_token: api-key
   scheduled_updates: false
   scheduled_interval: 10
 

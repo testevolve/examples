@@ -11,8 +11,8 @@ local:
 dashboard:
   enabled: false
   project_id: 1
-  label: spark-example-tests
-  auth_token: Your Organisation API Key
+  label: example-label
+  auth_token: api-key
   scheduled_updates: false
   scheduled_interval: 10
 
