@@ -11,5 +11,3 @@ lighthouse:
 
 axe:
   standards: []
-
-<%= IO.read(filename) if File.exists?(filename) %>

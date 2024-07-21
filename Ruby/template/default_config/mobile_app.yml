@@ -23,5 +23,3 @@ local_device:
     platform_name: Android
     platform_version: API 32
     udid: emulator-5554
-
-  <%= IO.read(filename) if File.exists?(filename) %>

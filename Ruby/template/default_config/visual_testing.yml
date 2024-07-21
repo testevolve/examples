@@ -35,5 +35,3 @@ percy:
   branch: default
   widths: [1080, 375]
   debug: false
-
-<%= IO.read(filename) if File.exists?(filename) %>
