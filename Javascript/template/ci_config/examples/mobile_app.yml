@@ -1,4 +1,4 @@
-source: local
+source: local_device
 app_path: /path/to/app
 default_timeout: 20
 
