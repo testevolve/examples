@@ -146,5 +146,3 @@ firefox:
 
   version: default
   accept_insecure_certs: true
-
-<%= IO.read(filename) if File.exists?(filename) %>

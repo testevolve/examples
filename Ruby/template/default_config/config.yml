@@ -8,5 +8,3 @@ global:
   request_logging: true
   try_with_logging: true
   logging_severity: info
-
-<%= IO.read(filename) if File.exists?(filename) %>

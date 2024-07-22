@@ -24,6 +24,3 @@ testrail:
   domain: Your domain
   project_id: 1
   test_run_id: 1
-
-
-<%= IO.read(filename) if File.exists?(filename) %>

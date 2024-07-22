@@ -29,5 +29,3 @@ kobiton:
 testrail:
   username: Your Username
   password: Your Password
-  
-<%= IO.read(filename) if File.exists?(filename) %>  

@@ -4,5 +4,3 @@ app_name: My Desktop App
 image_directory: features/support/images
 find_timeout: 10
 similarity: 0.85
-
-<%= IO.read(filename) if File.exists?(filename) %>
