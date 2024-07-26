@@ -6,7 +6,7 @@ local:
 
   html_report: true
   realtime_failure: false
-  junit: false
+  junit: true
   json: false
   rerun: false
 
