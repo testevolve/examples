@@ -13,7 +13,7 @@ local:
   platform: desktop # desktop, mobile, tablet
 
   desktop:
-    browser: chrome # chrome, firefox, safari, edge
+    browser: firefox # chrome, firefox, safari, edge
     maximise: true # true, false
     resize: false # true, false
     breakpoint:
