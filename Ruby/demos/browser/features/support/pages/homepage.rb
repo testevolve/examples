@@ -27,6 +27,26 @@ module Pages
     element(:button_double) { button(data_test: 'example-double') }
     element(:email) { text_field(data_test: 'example-email') }
 
+    def retry_action_on_element(attempts, element, action, *args)
+      counter = attempts
+
+      while counter.positive?
+        element.scroll.to
+
+        begin
+          if args.empty?
+            element.send(action)
+          else
+            element.send(action, *args)
+          end
+          break
+
+        rescue StandardError
+          counter -= 1
+        end
+      end
+    end
+
     def interact_with_page_objects()
       my_banner.click if my_banner.present?
       my_link.click
@@ -52,10 +72,9 @@ module Pages
       password.set('my secret')
       raise "Expected: 'my secret', Actual: #{password.value}" unless password.value == 'my secret'
       number.set("12345")
-      my_radio.scroll.to
-      my_radio.click
-      my_radio_2.click
-      my_checkbox.check
+      retry_action_on_element(5, my_radio, :click)
+      retry_action_on_element(5, my_radio_2, :click)
+      retry_action_on_element(5, my_checkbox, :check)
       my_select.select('Option 3')
       button_double.double_click
       email.set('test@test.com')
