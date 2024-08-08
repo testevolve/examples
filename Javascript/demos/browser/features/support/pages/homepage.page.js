@@ -28,6 +28,28 @@ export default new class Homepage extends PageObject {
   }
 
   interactWithPageObjectsAPI = async () => {
+    const retryActionOnElement = async (attempts, element, action, ...args) => {
+      let counter = attempts;
+    
+      while (counter > 0) {
+        await testEvolve.browser.scroll.to(element);
+    
+        try {
+          if (args.length === 0) {
+            await element[action]();
+          } else {
+            await element[action](...args);
+          }
+          break;
+        } catch (error) {
+          counter -= 1;
+          if (counter <= 0) {
+            throw error;
+          };
+        };
+      };
+    };
+
     try {
       if (await this.myBanner.isDisplayed()) {
         await this.myBanner.click();
@@ -72,9 +94,9 @@ export default new class Homepage extends PageObject {
 
     await this.number.set("12345");
     await testEvolve.browser.scroll.to(this.myRadio);
-    await this.myRadio.click();
-    await this.myRadio2.click();
-    await this.myCheckbox.check();
+    await retryActionOnElement(10, this.myRadio, 'click');
+    await retryActionOnElement(10, this.myRadio2, 'click');
+    await retryActionOnElement(10, this.myCheckbox, 'check');
     await this.mySelect.selectValue("Option 3")
     await this.buttonDouble.doubleClick();
     await this.email.set('test@test.com');
