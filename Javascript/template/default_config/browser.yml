@@ -89,9 +89,11 @@ chrome:
   jmeter: false
   owasp_zap: false
   custom_options: []
+  download_location: default
 
 firefox:
   version: default
 
 edge:
   version: default
+  download_location: default

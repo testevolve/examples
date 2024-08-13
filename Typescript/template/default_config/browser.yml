@@ -89,9 +89,11 @@ chrome:
   owasp_zap: false
   custom_options: []
   version: default
+  download_location: default
 
 firefox:
   version: default
 
 edge:
   version: default
+  download_location: default
