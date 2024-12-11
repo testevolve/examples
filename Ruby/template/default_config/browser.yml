@@ -1,6 +1,6 @@
 &defaults_browser
 
-source: local               # local, browserstack, perfecto, sauce_labs, kobiton, local_device
+source: local               # local, browserstack, perfecto, sauce_labs, kobiton, local_device, lambda_test - review comments
 
 default_timeout: 10
 implicit_wait: 0
