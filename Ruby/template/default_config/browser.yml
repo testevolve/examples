@@ -1,6 +1,6 @@
 &defaults_browser
 
-source: local # local, browserstack, perfecto, sauce_labs, kobiton, local_device
+source: local               # local, browserstack, perfecto, sauce_labs, kobiton, local_device, lambda_test
 
 default_timeout: 10
 implicit_wait: 0
@@ -11,22 +11,22 @@ close_browser: true
 clear_cookies: true
 
 local:
-  platform: desktop # desktop, mobile, tablet
+  platform: desktop         # desktop, mobile, tablet
 
   desktop:
-    browser: chrome # chrome, firefox, ie, safari, edge
-    maximise: true # true, false
-    resize: false # true, false
+    browser: chrome         # chrome, firefox, ie, safari, edge
+    maximise: true          # true, false
+    resize: false           # true, false
     breakpoint:
       width: 800
       height: 600
 
   mobile:
-    browser: firefox   # chrome, firefox, safari
+    browser: firefox        # chrome, firefox, safari
     device: android_tablet  # firefox devices - iphone, ipad, android_phone, android_tablet
-    # chrome devices - use a valid chrome device eg. iPhone X
+                            # chrome devices - use a valid chrome devtools based emulated device eg. iPhone X
 browserstack:
-  platform: desktop # desktop, mobile
+  platform: desktop         # desktop, mobile
 
   local_testing: false
   browserstack_debug: true
@@ -40,8 +40,8 @@ browserstack:
     platform_version: 10
     resolution: 1024x768
 
-    maximise: true # true, false
-    resize: false # true, false
+    maximise: true          # true, false
+    resize: false           # true, false
     breakpoint:
       width: 800
       height: 600
@@ -53,7 +53,7 @@ browserstack:
     os_version: 10.3
 
 perfecto:
-  platform: desktop # desktop, mobile
+  platform: desktop         # desktop, mobile
 
   connection_timeout: 60
 
@@ -65,8 +65,8 @@ perfecto:
     resolution: 1366x768
     location: US East
 
-    maximise: true # true, false
-    resize: false # true, false
+    maximise: true          # true, false
+    resize: false           # true, false
     breakpoint:
       width: 800
       height: 600
@@ -75,7 +75,7 @@ perfecto:
     device_id: 123456789
 
 sauce_labs:
-  platform: desktop # desktop, mobile
+  platform: desktop         # desktop, mobile
 
   test_name: Regression Tests
 
@@ -85,8 +85,8 @@ sauce_labs:
     browser_version: 45
     resolution: 1024x768
 
-    maximise: true # true, false
-    resize: false # true, false
+    maximise: true          # true, false
+    resize: false           # true, false
     breakpoint:
       width: 800
       height: 600
@@ -122,11 +122,27 @@ local_device:
     platform_version: 5.0.2
     udid: 1a4f2d81
 
+lambda_test:
+  platform: desktop         # desktop, mobile
+  lambda_test_options: [ ]
+  desktop:
+    browser: Chrome
+    browser_version: 120
+    platform: Windows 10
+    maximise: true          # true, false
+    resize: false           # true, false
+    breakpoint:
+      width: 800
+      height: 600
+  mobile:
+    browser: Safari
+    device: iPhone 12
+    os: ios
+    os_version: 14
+
 chrome:
 
-  # 117.0.5938.149, 117, default, beta, dev, canary
-
-  version: default
+  version: default          # example versions: 117, default, stable, beta, dev, canary
   jmeter: false
   owasp_zap: false
   custom_options: [ ]
