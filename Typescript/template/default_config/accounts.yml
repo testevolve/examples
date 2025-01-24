@@ -20,3 +20,7 @@ sauce_labs:
 testrail:
   username: My Username
   password: My Password
+
+lambda_test:
+  username: Your Username
+  access_key: Your Access Key
