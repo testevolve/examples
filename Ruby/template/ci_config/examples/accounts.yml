@@ -27,3 +27,7 @@ perfecto:
 testrail:
   username: Your Username
   password: Your Password
+
+lambda_test:
+  username: Your Username
+  access_key: Your Access Key

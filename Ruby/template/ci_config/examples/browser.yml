@@ -86,6 +86,24 @@ sauce_labs:
     platform_name: iOS    
     browser: Safari
 
+lambda_test:
+  platform: desktop # desktop, mobile
+  lambda_test_options: [ ]
+  desktop:
+    browser: Chrome
+    browser_version: 120
+    platform: Windows 10
+    maximise: true # true, false
+    resize: false # true, false
+    breakpoint:
+      width: 800
+      height: 600
+  mobile:
+    browser: Safari
+    device: iPhone 12
+    os: ios
+    os_version: 14
+
 chrome:
 
   version: default
