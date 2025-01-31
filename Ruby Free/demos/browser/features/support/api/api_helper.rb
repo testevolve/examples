@@ -1,4 +1,4 @@
-module Api
+module APIHelper
   require 'rest-client'
   require 'json'
 
