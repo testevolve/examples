@@ -59,7 +59,7 @@ export const exampleDataOutputsFromResponse = (responseData) => {
 	if (responseData.items[0]) {
 		testEvolve.log.info('Extract the first object: ', responseData.items[0]);
 		testEvolve.log.info('Extract the "start_year" of the first object: ', responseData.items[0]['start_year']);
-		testEvolve.log.info('Extract the first "holding_type" of the first object: ', responseData.items[0]?.holding_type?.[0] || 'N/A');
+		testEvolve.log.info('Extract the first "holding_type" of the first object: ', responseData.items[0]['holding_type'][0]);
 	}
 
 	if (responseData.items[1]) {
@@ -68,6 +68,6 @@ export const exampleDataOutputsFromResponse = (responseData) => {
 
 	if (responseData.items[2]) {
 		testEvolve.log.info('Extract the "url" of the third object: ', responseData.items[2]['url']);
-		testEvolve.log.info('Extract the second "holding_type" of the third object: ', responseData.items[2]?.holding_type?.[1] || 'N/A');
+		testEvolve.log.info('Extract the second "holding_type" of the third object: ', responseData.items[2]['holding_type'][1]);
 	}
 };
