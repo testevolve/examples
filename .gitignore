@@ -1,2 +1,20 @@
+# Configs
 .DS_Store
 .idea
+
+# Ruby projects
+Ruby/template/.testevolve
+
+# Ruby Free projects
+Ruby Free/template/.testevolve
+
+# JS projects
+Javascript/template/node_modules
+Javascript/template/.testevolve
+
+# TS projects
+Typescript/template/node_modules
+Typescript/template/.testevolve
+
+# Python projects
+Python/template/.testevolve
