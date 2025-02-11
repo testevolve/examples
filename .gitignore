@@ -1,2 +1,14 @@
+# Configs
 .DS_Store
 .idea
+
+# JS projects
+Javascript/template/node_mopdules
+Javascript/template/.testevolve
+
+# TS projects
+Typescript/template/node_mopdules
+Typescript/template/.testevolve
+
+# Python projects
+Python/template/.testevolve
