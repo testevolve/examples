@@ -3,12 +3,12 @@
 .idea
 
 # JS projects
-Javascript/template/node_mopdules
+Javascript/template/node_modules
 Javascript/template/.testevolve
 
 # TS projects
-Typescript/template/node_mopdules
-Typescript/template/.testevolve
+Typescript/template/node_modules
+Javascript/template/.testevolve
 
 # Python projects
 Python/template/.testevolve
