@@ -5,7 +5,11 @@ Monorepo for examples projects for multiple languages used when creating new def
 To run the linter for a particular language's Project examples:
 
 ### ./Javascript
-run `npx eslint`
+run
+```
+    cd ./Javascript/template
+    npx eslint
+```
 
 ### ./Python
 run
@@ -22,4 +26,8 @@ run `rubocop`
 run `rubocop`
 
 ### ./Typescript
-run `npx eslint`
+run
+```
+    cd ./Typescript/template
+    npx eslint
+```
