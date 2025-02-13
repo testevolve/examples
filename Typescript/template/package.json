@@ -12,5 +12,11 @@
     "test:windows": ".\\node_modules\\.bin\\cucumber-js",
     "rerun": "./node_modules/.bin/cucumber-js ./remote_test_results/rerun/@rerun.log",
     "rerun:windows": ".\\node_modules\\.bin\\cucumber-js ./remote_test_results/rerun/@rerun.log"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0",
+    "typescript-eslint": "^8.24.0"
   }
 }

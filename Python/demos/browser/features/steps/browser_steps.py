@@ -2,6 +2,7 @@ from testevolve import TestEvolve, Page
 from features.support.pages.homepage import Homepage
 from selenium.webdriver.common.by import By
 from selenium.common import exceptions
+from behave import given, when, then
 
 @given(u'I open a page')
 def step(context):

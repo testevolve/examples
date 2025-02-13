@@ -6,6 +6,7 @@ page_load_timeout: 10
 
 same_browser: false
 close_browser: true
+clear_cookies: true
 
 local:
   platform: desktop # desktop, mobile, tablet
@@ -88,6 +89,7 @@ chrome:
   jmeter: false
   owasp_zap: false
   custom_options: []
+  download_location: default
   version: default
 
 firefox:

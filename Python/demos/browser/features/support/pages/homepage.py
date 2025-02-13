@@ -7,6 +7,7 @@ import os
 class Homepage(Page):
     def __init__(self):
         self.myBanner = TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper")
+        self.acceptCookies = TestEvolve.browser.find_element(By.CLASS_NAME, 'accept')
         self.mylink = TestEvolve.browser.find_element(By.NAME, "example-link")
         self.myButton = TestEvolve.browser.find_element(By.NAME, "example-button")
         self.text = TestEvolve.browser.find_element(By.NAME, "example-text")
@@ -35,18 +36,21 @@ class Homepage(Page):
         TestEvolve.browser.get(page)
 
     def accept_cookies(self):
-        if TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper").is_displayed():
-            TestEvolve.browser.find_element(By.CLASS_NAME, "sqs-cookie-banner-v2-acceptWrapper").click()
+        try:
+            TestEvolve.browser.find_element(By.CLASS_NAME, "accept").is_displayed()
+            TestEvolve.browser.find_element(By.CLASS_NAME, "accept").click()
+        except:
+            TestEvolve.log.debug('Accept cookies button not found. Continuing')
 
     def interact_with_page_objects(self):
         TestEvolve.browser.find_element(By.NAME, "example-link").click()
         TestEvolve.browser.find_element(By.NAME, "example-button").click()
         TestEvolve.browser.find_element(By.NAME, "example-text").send_keys('some text')
         TestEvolve.browser.find_element(By.NAME, "example-phone").send_keys('01268 467890')
-        TestEvolve.browser.find_element(By.NAME, "example-datetime").send_keys('2025-02-02', '13:57');
+        TestEvolve.browser.find_element(By.NAME, "example-datetime").send_keys('2025-02-02', '13:57')
         TestEvolve.browser.find_element(By.NAME, "example-date").send_keys('2025-02-02')
-        TestEvolve.browser.find_element(By.NAME, "example-week").send_keys('26','2025');
-        TestEvolve.browser.find_element(By.NAME, "example-month").send_keys('12', '2025');
+        TestEvolve.browser.find_element(By.NAME, "example-week").send_keys('26','2025')
+        TestEvolve.browser.find_element(By.NAME, "example-month").send_keys('12', '2025')
         TestEvolve.browser.find_element(By.NAME, "example-range").send_keys('3')
         TestEvolve.browser.find_element(By.NAME, "example-range").send_keys('5')
         TestEvolve.browser.find_element(By.NAME, "example-range").send_keys('4')
