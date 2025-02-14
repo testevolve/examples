@@ -109,13 +109,13 @@ export default new class Homepage extends PageObject {
 
     await this.number.set("12345");
 
-    await testEvolve.browser.scroll.to(this.myRadio);
+    await this.scrollIntoViewPort(this.myRadio);
     await this.myRadio.click();
 
-    await testEvolve.browser.scroll.to(this.myRadio2)
+    await this.scrollIntoViewPort(this.myRadio2)
     await this.myRadio2.click();
 
-    await testEvolve.browser.scroll.to(this.myCheckbox)
+    await this.scrollIntoViewPort(this.myCheckbox)
     await this.myCheckbox.check();
     await this.myCheckbox.check();
     await this.myCheckbox.check();
@@ -156,3 +156,4 @@ export default new class Homepage extends PageObject {
      };
   };
 };
+
