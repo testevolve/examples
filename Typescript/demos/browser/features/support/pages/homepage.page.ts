@@ -115,13 +115,13 @@ export default new class Homepage extends PageObject {
 
     await this.number.set("12345");
 
-    await testEvolve.browser.scroll.to(this.myRadio);
+    await this.scrollIntoViewPort(this.myRadio);
     await this.myRadio.click();
 
-    await testEvolve.browser.scroll.to(this.myRadio2)
+    await this.scrollIntoViewPort(this.myRadio2)
     await this.myRadio2.click();
 
-    await testEvolve.browser.scroll.to(this.myCheckbox)
+    await this.scrollIntoViewPort(this.myCheckbox)
     await this.myCheckbox.check();
     await this.myCheckbox.check();
     await this.myCheckbox.check();
@@ -131,6 +131,14 @@ export default new class Homepage extends PageObject {
     await this.buttonDouble.doubleClick();
 
     await this.email.set('test@test.com');
+  }
+
+  async scrollIntoViewPort(element) {
+    const domElement = await element.get();
+    await testEvolve.browser.executeScript((el) => {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, domElement);
+    await testEvolve.browser.sleep(500);
   }
 
   assertObjectChanges = async () => {
@@ -145,3 +153,4 @@ export default new class Homepage extends PageObject {
      };
   };
 };
+
