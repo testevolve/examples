@@ -108,7 +108,6 @@ export default new class Homepage extends PageObject {
     await testEvolve.browser.executeScript((el) => {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, domElement);
-    await testEvolve.browser.sleep(400);
   }
 
   assertObjectChanges = async () => {
