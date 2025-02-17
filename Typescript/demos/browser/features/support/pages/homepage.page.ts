@@ -91,9 +91,7 @@ export default new class Homepage extends PageObject {
 
     await this.file.set(`${process.cwd()}/features/support/resources/robot_picture.png`);
 
-    await this.url.set('www.bbc.co.uk');
-
-    await testEvolve.browser.sleep(1000);
+    await this.url.set('www.bbc.co.uk')
 
     await this.mySearch.set('looking for...');
     text = await this.mySearch.value()
@@ -101,11 +99,7 @@ export default new class Homepage extends PageObject {
       throw new Error(`Expected: 'looking for...', Actual: '${text}'`)
     };
 
-    await testEvolve.browser.sleep(1000);
-
     await this.colour.set('#00ff41')
-
-    await testEvolve.browser.sleep(1000);
 
     await this.password.set('my secret');
     if (await this.password.value() !== 'my secret') {
@@ -115,13 +109,13 @@ export default new class Homepage extends PageObject {
 
     await this.number.set("12345");
 
-    await testEvolve.browser.scroll.to(this.myRadio);
+    await this.scrollIntoViewPort(this.myRadio);
     await this.myRadio.click();
 
-    await testEvolve.browser.scroll.to(this.myRadio2)
+    await this.scrollIntoViewPort(this.myRadio2)
     await this.myRadio2.click();
 
-    await testEvolve.browser.scroll.to(this.myCheckbox)
+    await this.scrollIntoViewPort(this.myCheckbox)
     await this.myCheckbox.check();
     await this.myCheckbox.check();
     await this.myCheckbox.check();
@@ -131,6 +125,23 @@ export default new class Homepage extends PageObject {
     await this.buttonDouble.doubleClick();
 
     await this.email.set('test@test.com');
+  }
+
+  async scrollIntoViewPort(element) {
+    const domElement = await element.get();
+  
+    await testEvolve.browser.executeScript((el) => {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, domElement);
+  
+    await testEvolve.browser.wait(async () => {
+      const { top, bottom, innerHeight } = await testEvolve.browser.executeScript((el) => {
+        const { top, bottom } = el.getBoundingClientRect();
+        return { top, bottom, innerHeight: window.innerHeight };
+      }, domElement);
+  
+      return top >= 0 && bottom <= innerHeight;
+    }, 5000, 'Element did not scroll into view in time');
   }
 
   assertObjectChanges = async () => {
@@ -145,3 +156,4 @@ export default new class Homepage extends PageObject {
      };
   };
 };
+
