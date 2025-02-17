@@ -8,6 +8,10 @@ def before_scenario(context, scenario):
     hooks.before_scenario(context, scenario)
 
 
+def after_step(context, step):
+    hooks.after_step(context, step)
+
+
 def after_scenario(context, scenario):
     hooks.after_scenario(context, scenario)
 
