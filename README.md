@@ -12,14 +12,37 @@ run
 ```
 
 ### ./Python
+run
+```
+    cd ./Python/template
+    pipenv install
+    pipenv run pylint ..
+```
+
+### ./Ruby
+run `rubocop`
+
+### ./Ruby Free
+run `rubocop`
+
+### ./Typescript
+run
+```
+    cd ./Typescript/template
+    npx eslint
+```
+
+
+## Running the example tests locally
+### ./Python
 To run Python tests:
 
 `cd` to ./Python/template, then run:
 ```
-pipenv --rm
-rm Pipfile.lock
-pipenv install
-pipenv shell
+    pipenv --rm
+    rm Pipfile.lock
+    pipenv install
+    pipenv shell
 ```
 to reset and start a virtual environment
 
@@ -37,16 +60,3 @@ To run multiple test tags:
 
 To prevent printing skipped test information to the logs, add the `--no-skipped` tag, e.g.:
 `pipenv run behave --tags=test --no-skipped`
-
-### ./Ruby
-run `rubocop`
-
-### ./Ruby Free
-run `rubocop`
-
-### ./Typescript
-run
-```
-    cd ./Typescript/template
-    npx eslint
-```
