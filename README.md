@@ -32,7 +32,6 @@ run
     npx eslint
 ```
 
-
 ## Running the example tests locally
 ### ./Python
 To run Python tests:
