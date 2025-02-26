@@ -60,6 +60,7 @@ class Homepage(Page):
         TestEvolve.browser.find_element(By.NAME, "example-colour1").send_keys('#00ff41')
         TestEvolve.browser.find_element(By.NAME, "example-password").send_keys('my secret')
         TestEvolve.browser.find_element(By.NAME, "example-number").send_keys("12345")
+        TestEvolve.browser.scroll_into_view(TestEvolve.browser.find_element(By.NAME, "example-radio-1"))
         TestEvolve.browser.find_element(By.NAME, "example-radio-1").click()
         ActionChains(TestEvolve.browser).move_to_element(TestEvolve.browser.find_element(By.NAME, "example-checkbox")).perform()
         TestEvolve.browser.find_element(By.NAME, "example-checkbox").click()
