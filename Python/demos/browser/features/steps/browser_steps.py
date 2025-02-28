@@ -1,4 +1,4 @@
-from testevolve import TestEvolve, Page
+from testevolve import TestEvolve
 from features.support.pages.homepage import Homepage
 from selenium.webdriver.common.by import By
 from selenium.common import exceptions
@@ -6,8 +6,8 @@ from behave import given, when, then
 
 @given(u'I open a page')
 def step(context):
-  Homepage.open(context)
-  Homepage.accept_cookies(context)
+  context.homepage.open()
+  context.homepage.accept_cookies()
 
 @given(u'I open a page - {page}')
 def step(context, page):
@@ -48,4 +48,4 @@ def step(context):
 
 @then(u'I interact with page elements')
 def step(context):
-  Homepage.interact_with_page_objects(context)
+  context.homepage.interact_with_page_objects()
