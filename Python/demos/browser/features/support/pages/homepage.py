@@ -6,7 +6,7 @@ import os
 class Homepage(PageObject):
     def __init__(self):
         self.accept_cookies_button = self.element(class_name='accept')
-        # self.mylink = self.element('example-link')
+        self.myLink = self.element(name='example-link')
         self.myButton = self.element(name='example-button')
         self.myText = self.element(name='example-text')
         self.phone = self.element(name='example-phone')
@@ -41,7 +41,7 @@ class Homepage(PageObject):
             TestEvolve.log.debug('Accept cookies button not found. Continuing')
 
     def interact_with_page_objects(self):
-        # self.myLink().click()
+        self.myLink().click()
         self.myButton().click()
         self.myText().send_keys('some text')
         self.phone().send_keys('01268 467890')
@@ -62,8 +62,6 @@ class Homepage(PageObject):
         self.myRadio().click()
         TestEvolve.browser.scroll_into_view(self.myCheckbox())
         self.myCheckbox().click()
-        TestEvolve.browser.scroll_into_view(self.mySelect())
-        # self.mySelect().select_by_value('Option 3')
-        TestEvolve.browser.scroll_into_view(self.buttonDouble())
-        # self.buttonDouble().double_click()
+        self.mySelect.select_value('Option 3')
+        self.buttonDouble.double_click()
         self.email().send_keys('test@test.com')
