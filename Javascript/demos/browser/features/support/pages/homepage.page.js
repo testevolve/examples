@@ -89,7 +89,7 @@ export default new class Homepage extends PageObject {
     await this.myCheckbox.check();
     await this.myCheckbox.check();
 
-    await this.mySelect.selectValue("Option 3")
+    await this.mySelect.selectValue("United Kingdom")
 
     await this.buttonDouble.doubleClick();
 
