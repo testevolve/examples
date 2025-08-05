@@ -75,7 +75,7 @@ module Pages
       retry_action_on_element(5, my_radio, :click)
       retry_action_on_element(5, my_radio_2, :click)
       retry_action_on_element(5, my_checkbox, :check)
-      my_select.select('Option 3')
+      my_select.select('United Kingdom')
       button_double.double_click
       email.set('test@test.com')
     end
