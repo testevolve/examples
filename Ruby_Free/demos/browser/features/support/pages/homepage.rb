@@ -56,7 +56,7 @@ module Pages
       my_radio.click
       my_radio_2.click
       my_checkbox.check
-      my_select.select('Option 3')
+      my_select.select('United Kingdom')
       button_double.double_click
       email.set('test@test.com')
     end
