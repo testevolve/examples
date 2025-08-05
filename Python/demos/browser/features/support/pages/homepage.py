@@ -62,6 +62,6 @@ class Homepage(PageObject):
         self.myRadio().click()
         TestEvolve.browser.scroll_into_view(self.myCheckbox())
         self.myCheckbox().click()
-        self.mySelect.select_value('United Kingdom')
+        self.mySelect.select_value('uk')
         self.buttonDouble.double_click()
         self.email().send_keys('test@test.com')
