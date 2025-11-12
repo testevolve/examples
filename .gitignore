@@ -11,10 +11,12 @@ Ruby Free/template/.testevolve
 # JS projects
 Javascript/template/node_modules
 Javascript/template/.testevolve
+Javascript/template/package-lock.json
 
 # TS projects
 Typescript/template/node_modules
 Typescript/template/.testevolve
+Typescript/template/package-lock.json
 
 # Python projects
 Python/template/.testevolve
